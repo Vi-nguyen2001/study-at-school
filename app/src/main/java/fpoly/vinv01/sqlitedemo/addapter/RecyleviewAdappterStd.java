@@ -3,6 +3,8 @@ package fpoly.vinv01.sqlitedemo.addapter;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -71,6 +73,35 @@ public class RecyleviewAdappterStd extends RecyclerView.Adapter<RecyleviewAdappt
         });
         holder.imgthem.setOnClickListener(v -> {
             //sửa
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setCancelable(false);
+            View view = View.inflate(context,R.layout.layout_dialog_edit,null);
+            EditText edtName = view.findViewById(R.id.edtName);
+            EditText edtAddress = view.findViewById(R.id.edtAddress);
+            EditText edtAvata = view.findViewById(R.id.edtAvata);
+            Button btnOK = view.findViewById(R.id.btnOK);
+            Button btnH = view.findViewById(R.id.btnH);
+            edtName.setText(student.getName());
+            edtAddress.setText(student.getAddress());
+            edtAvata.setText(student.getAvata());
+            builder.setView(view);
+            AlertDialog dialog = builder.create();
+            btnOK.setOnClickListener(v1 -> {
+                student.setName(edtName.getText().toString());
+                student.setAddress(edtAddress.getText().toString());
+                student.setAvata(edtAvata.getText().toString());
+                StudentDAO dao = new StudentDAO(context);
+                if(dao.update(student)>0){
+                    list.set(position,student);
+                    notifyItemChanged(position);
+                    Toast.makeText(context, "Sửa thành công", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }else{
+                    Toast.makeText(context, "Sửa thất bại", Toast.LENGTH_SHORT).show();
+                }
+                });
+
+            dialog.show();
         });
     }
 
