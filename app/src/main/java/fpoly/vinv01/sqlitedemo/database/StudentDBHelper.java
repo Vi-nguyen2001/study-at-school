@@ -28,8 +28,6 @@ public class StudentDBHelper extends SQLiteOpenHelper {
     }
 
 
-
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //hàm này chỉ chạy khi version_DB  thay đổi

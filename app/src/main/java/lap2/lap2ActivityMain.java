@@ -31,10 +31,6 @@ public class lap2ActivityMain extends AppCompatActivity {
     private ArrayList<ToDoLap2> list;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,7 +97,5 @@ public class lap2ActivityMain extends AppCompatActivity {
         dsToDo = findViewById(R.id.dsToDo);
         btnThem = findViewById(R.id.btnThem);
         dsToDo.setLayoutManager(new androidx.recyclerview.widget.LinearLayoutManager(this));
-        dsToDo.setAdapter(adapter);
-
     }
 }

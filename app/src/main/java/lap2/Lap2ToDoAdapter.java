@@ -150,7 +150,7 @@ public class Lap2ToDoAdapter extends RecyclerView.Adapter<Lap2ToDoAdapter.ViewHo
         return 0;
     }
 
-   public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         CheckBox checkBox;
         TextView txtMonHoc, txtNgay;
         ImageView imgThungRac, imgSua;
@@ -169,11 +169,12 @@ public class Lap2ToDoAdapter extends RecyclerView.Adapter<Lap2ToDoAdapter.ViewHo
     private void updateTextDecoration(TextView textView, boolean isChecked) {
         if (isChecked) {
             textView.setPaintFlags(textView.getPaintFlags() | android.graphics.Paint.STRIKE_THRU_TEXT_FLAG);
-        }else {
+        } else {
             textView.setPaintFlags(textView.getPaintFlags() & ~android.graphics.Paint.STRIKE_THRU_TEXT_FLAG);
         }
 
     }
+
     private void showDialogUpdate(ToDoLap2 item, int pos) {
         // 1. Khởi tạo và nạp Layout
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -197,16 +198,16 @@ public class Lap2ToDoAdapter extends RecyclerView.Adapter<Lap2ToDoAdapter.ViewHo
         edtMucDo.setText(item.getType());
 
         edtMucDo.setOnClickListener(v1 -> {
-                edtMucDo.setFocusable(false);
-                edtMucDo.setClickable(true);
-                String[] mucDo = {"Dễ", "Trung Bình", "Khó"};
-                android.app.AlertDialog.Builder builder1 = new android.app.AlertDialog.Builder(context);
-                builder1.setTitle("Chọn mức độ");
-                builder1.setItems(mucDo, (dialog1, which) -> {
-                    edtMucDo.setText(mucDo[which]);
-                });
-                builder1.show();
+            edtMucDo.setFocusable(false);
+            edtMucDo.setClickable(true);
+            String[] mucDo = {"Dễ", "Trung Bình", "Khó"};
+            android.app.AlertDialog.Builder builder1 = new android.app.AlertDialog.Builder(context);
+            builder1.setTitle("Chọn mức độ");
+            builder1.setItems(mucDo, (dialog1, which) -> {
+                edtMucDo.setText(mucDo[which]);
             });
+            builder1.show();
+        });
 
         // 4. Xử lý nút Lưu
         btnSave.setOnClickListener(v -> {

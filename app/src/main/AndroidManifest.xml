@@ -14,19 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLiteDemo">
         <activity
-            android:name="lap2.lap2ActivityMain"
-            android:exported="false" >
-        </activity>
-        <activity
-            android:name="lap1.lap1MainScreen"
+            android:name=".MainActivity"
             android:exported="false">
 
         </activity>
         <activity
-            android:name=".ListStudentScreen"
+            android:name="Assignment.Activity.QLSanPhamActivity_Assm"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="Assignment.Activity.MainActivity_Assm"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +30,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="Assignment.Activity.DangKy_assm"
+            android:exported="false" />
+        <activity
+            android:name="Assignment.Activity.LoginAssm"
+            android:exported="false" />
+        <activity
+            android:name="lap2.lap2ActivityMain"
+            android:exported="false" />
+        <activity
+            android:name="lap1.lap1MainScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ListStudentScreen"
+            android:exported="false" />
     </application>
 
 </manifest>
