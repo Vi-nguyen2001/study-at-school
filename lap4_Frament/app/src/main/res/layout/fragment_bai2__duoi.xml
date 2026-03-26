@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="lap4.Screen.Bai2_FragmentDuoi"
+    android:background="#808080">
+
+    <!-- TODO: Update blank fragment layout -->
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/edtNhap"
+          android:hint="Nhap du lieu"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:background="@drawable/bg_edittext"
+          android:padding="10dp"
+          />
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/btnGui"
+          android:text="Send"
+          android:layout_below="@+id/edtNhap"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:backgroundTint="#008000"
+          app:strokeWidth="2dp"
+          app:cornerRadius="10dp"
+          />
+  </RelativeLayout>
+
+
+</FrameLayout>
