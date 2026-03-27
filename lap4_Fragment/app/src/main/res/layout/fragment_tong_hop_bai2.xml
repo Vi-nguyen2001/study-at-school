@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="lap4.Bai2_lap4"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <androidx.fragment.app.FragmentContainerView
         android:name="lap4.Screen.Bai2_FragmentTren"
@@ -15,15 +10,13 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/fragment_tren"
-        android:layout_marginBottom="10dp"
-        />
+        android:layout_marginBottom="10dp" />
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:name="lap4.Screen.Bai2_FragmentDuoi"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/fragment_duoi"
-        />
+        android:id="@+id/fragment_duoi" />
 
 </LinearLayout>

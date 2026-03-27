@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FragmentApplication">
         <activity
-            android:name="lap4.Bai3_lap4Activity"
+            android:name="lap4.ManHinhTongHopLap4"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,20 +21,18 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="lap4.Bai3_lap4Activity"
+            android:exported="false"></activity>
+        <activity
             android:name="lap4.Bai2_lap4"
             android:exported="false">
-
         </activity>
         <activity
             android:name="lap4.lap4MainScreen"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false" >
-
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>

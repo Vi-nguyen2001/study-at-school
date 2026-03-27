@@ -10,6 +10,10 @@ public class lap4Adapter extends FragmentStateAdapter {
         super(fragmentActivity);
     }
 
+    public lap4Adapter(@NonNull Fragment fragment) {
+        super(fragment);
+    }
+
 
     @NonNull
     @Override

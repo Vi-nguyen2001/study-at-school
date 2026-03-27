@@ -5,25 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="lap4.Bai2_lap4"
+    tools:context="lap4.ManHinhTongHopLap4"
     android:orientation="vertical"
     >
-
-    <androidx.fragment.app.FragmentContainerView
-        android:name="lap4.Screen.Bai2_FragmentTren"
+    <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:id="@+id/viewPagerTong"
         android:layout_weight="1"
-        android:id="@+id/fragment_tren"
-        android:layout_marginBottom="10dp"
         />
-
-    <androidx.fragment.app.FragmentContainerView
+    <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:name="lap4.Screen.Bai2_FragmentDuoi"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:id="@+id/fragment_duoi"
+        android:layout_height="wrap_content"
+        android:id="@+id/tapLayoutTong"
         />
 
 </LinearLayout>
