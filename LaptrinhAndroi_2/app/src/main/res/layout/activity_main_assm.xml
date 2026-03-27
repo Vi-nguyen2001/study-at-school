@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#F7631E"
+            android:background="#F7691E"
             app:title="Trang chủ"
             app:titleTextColor="#FFFFFF" />
 

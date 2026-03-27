@@ -73,11 +73,6 @@ public class StudentDAO {
         }finally {
             db.endTransaction();
         }
-
-
-
-
-
         return kq;
     }
 

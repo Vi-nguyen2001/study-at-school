@@ -10,6 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import android.content.Intent;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -40,8 +41,9 @@ public class MainActivity_Assm extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_san_pham) {
-
-                toolbar.setTitle("Quản lý sản phẩm");
+                // Chuyển sang màn hình Quản lý sản phẩm
+                Intent intent = new Intent(MainActivity_Assm.this, QLSanPhamActivity_Assm.class);
+                startActivity(intent);
             } else if (id == R.id.nav_dang_xuat) {
                 finish();
             }
