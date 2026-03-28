@@ -23,13 +23,14 @@ public class MainActivity_Assm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main_assm);
-
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar,

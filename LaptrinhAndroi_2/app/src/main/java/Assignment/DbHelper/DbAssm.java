@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 public class DbAssm extends SQLiteOpenHelper {
 
     public DbAssm(Context context) {
-        super(context, "DbAssm", null, 1);
+        super(context, "DbAssm", null, 2);
     }
 
     //Tạo bảng NguoiDung (tenDangNhap, matKhau, hoTen)

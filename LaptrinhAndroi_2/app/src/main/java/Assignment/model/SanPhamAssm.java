@@ -3,10 +3,10 @@ package Assignment.model;
 public class SanPhamAssm {
     private int maSp;
     private String tenSp;
-    private double giaSp;
+    private String giaSp;
     private int soLuong;
 
-    public SanPhamAssm(int maSp, String tenSp, double giaSp, int soLuong) {
+    public SanPhamAssm(int maSp, String tenSp, String giaSp, int soLuong) {
         this.maSp = maSp;
         this.tenSp = tenSp;
         this.giaSp = giaSp;
@@ -32,11 +32,11 @@ public class SanPhamAssm {
         this.tenSp = tenSp;
     }
 
-    public double getGiaSp() {
+    public String getGiaSp() {
         return giaSp;
     }
 
-    public void setGiaSp(double giaSp) {
+    public void setGiaSp(String giaSp) {
         this.giaSp = giaSp;
     }
 
