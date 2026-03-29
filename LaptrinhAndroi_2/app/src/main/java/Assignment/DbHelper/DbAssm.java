@@ -28,7 +28,12 @@ public class DbAssm extends SQLiteOpenHelper {
                 "giaSp REAL," +
                 "soLuong INTEGER)";
         db.execSQL(sqlSanPham);
+
+        db.execSQL("INSERT INTO NguoiDung VALUES ('admin','admin123','Nguyễn Văn Vĩ')");
     }
+
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

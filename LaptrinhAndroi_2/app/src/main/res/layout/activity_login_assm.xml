@@ -7,13 +7,15 @@
     android:layout_height="match_parent"
     tools:context="Assignment.Activity.LoginAssm"
     android:orientation="vertical"
-    android:layout_marginTop="80dp"
+    android:background="#FAF0E6"
+    android:gravity="center_vertical"
     >
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/logofpt"
+        android:layout_marginTop="-80dp"
         />
     <TextView
         android:layout_width="match_parent"
@@ -98,6 +100,7 @@
             android:gravity="center"
             />
         <TextView
+            android:id="@+id/dangKy"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Sign Up"

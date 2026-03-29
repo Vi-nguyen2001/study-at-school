@@ -42,9 +42,9 @@ public class AssmAdapter extends RecyclerView.Adapter<AssmAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull AssmAdapter.ViewHolder holder, int position) {
         SanPhamAssm sanPhamAssm = list.get(position);
-        holder.tvName.setText(sanPhamAssm.getTenSp());
-        holder.tvGiaSp.setText(sanPhamAssm.getGiaSp() + " VNĐ");
-        holder.tvSoLuong.setText(String.valueOf(sanPhamAssm.getSoLuong()));
+        holder.tvName.setText("Tên: "+sanPhamAssm.getTenSp());
+        holder.tvGiaSp.setText("Giá: "+sanPhamAssm.getGiaSp() + " VNĐ");
+        holder.tvSoLuong.setText("Số lượng: "+String.valueOf(sanPhamAssm.getSoLuong()));
 
         holder.tvChinhSua.setOnClickListener(v -> {
             showDialogSua(position);

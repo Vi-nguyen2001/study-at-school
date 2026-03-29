@@ -55,7 +55,12 @@ public class QLSanPhamActivity_Assm extends AppCompatActivity {
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.nav_san_pham) {
+            if (id == R.id.nav_trang_chu || id == R.id.nav_cai_dat || id == R.id.nav_gioi_thieu) {
+                // Return to MainActivity
+                Intent intent = new Intent(QLSanPhamActivity_Assm.this, MainActivity_Assm.class);
+                startActivity(intent);
+                finish();
+            } else if (id == R.id.nav_san_pham) {
                 // Đang ở chính nó thì không cần start lại activity
                 drawerLayout.closeDrawers();
             } else if (id == R.id.nav_dang_xuat) {

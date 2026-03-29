@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context="Assignment.Activity.DangKy_assm"
     android:orientation="vertical"
+    android:background="#FAF0E6"
     >
     <ImageView
         android:id="@+id/imgBack"
@@ -27,11 +28,32 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Họ và tên:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtHoTen"
+        android:background="@drawable/bg_edittext"
+        android:hint="Nhập họ và tên"
+        android:padding="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Username:"
         android:textStyle="bold"
         android:textSize="20sp"
         android:padding="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
+
         />
     <EditText
         android:layout_width="match_parent"
@@ -68,7 +90,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:text="SIGN UP"
         app:backgroundTint="#F7931E"
         app:strokeColor="#000000"

@@ -12,8 +12,17 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 
-import com.google.android.material.navigation.NavigationView;
+import android.view.View;
 
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+import androidx.viewpager2.widget.ViewPager2;
+import Assignment.Adapter.MyViewAdapter;
+import Assignment.FragmentScreen.QLSanPhamFragment;
+import com.google.android.material.tabs.TabLayoutMediator;
+import androidx.viewpager2.widget.ViewPager2;
+import Assignment.Adapter.MyViewAdapter;
 import fpoly.vinv01.sqlitedemo.R;
 
 public class MainActivity_Assm extends AppCompatActivity {
@@ -39,17 +48,90 @@ public class MainActivity_Assm extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        ViewPager2 viewPager = findViewById(R.id.view_pager);
+
+        MyViewAdapter adapter = new MyViewAdapter(this);
+        viewPager.setAdapter(adapter);
+
+        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
+            switch (position) {
+                case 0: tab.setText("Cài đặt"); break;
+                case 1: tab.setText("Trang Chủ"); break;
+                case 2: tab.setText("Giới thiệu"); break;
+            }
+        }).attach();
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setVisibility(View.VISIBLE);
+                findViewById(R.id.content_frame).setVisibility(View.GONE);
+                
+                if (tab.getPosition() == 0) {
+                    getSupportActionBar().setTitle("Cài đặt");
+                } else if (tab.getPosition() == 1) {
+                    getSupportActionBar().setTitle("Trang Chủ");
+                } else if (tab.getPosition() == 2) {
+                    getSupportActionBar().setTitle("Giới thiệu");
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {}
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                viewPager.setVisibility(View.VISIBLE);
+                findViewById(R.id.content_frame).setVisibility(View.GONE);
+            }
+        });
+
+        // Đặt Mặc định Trang Chủ (Index 1) hiển thị đầu tiên khi mở App
+        viewPager.setCurrentItem(1, false);
+
+        View contentFrame = findViewById(R.id.content_frame);
+
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.nav_san_pham) {
-                // Chuyển sang màn hình Quản lý sản phẩm
-                Intent intent = new Intent(MainActivity_Assm.this, QLSanPhamActivity_Assm.class);
-                startActivity(intent);
+            
+            // Xử lý chuyển Tab trong ViewPager khi click Menu
+            if (id == R.id.nav_trang_chu) {
+                viewPager.setVisibility(View.VISIBLE);
+                contentFrame.setVisibility(View.GONE);
+                getSupportActionBar().setTitle("Trang Chủ");
+                // Index 1 là Trang Chủ
+                viewPager.setCurrentItem(1);
+            } else if (id == R.id.nav_cai_dat) {
+                viewPager.setVisibility(View.VISIBLE);
+                contentFrame.setVisibility(View.GONE);
+                getSupportActionBar().setTitle("Cài đặt");
+                // Index 0 là Cài đặt
+                viewPager.setCurrentItem(0);
+            } else if (id == R.id.nav_gioi_thieu) {
+                viewPager.setVisibility(View.VISIBLE);
+                contentFrame.setVisibility(View.GONE);
+                getSupportActionBar().setTitle("Giới thiệu");
+                // Index 2 là Giới thiệu
+                viewPager.setCurrentItem(2);
+            } else if (id == R.id.nav_san_pham) {
+                // Ẩn ViewPager, giữ lại TabLayout, hiển thị FrameLayout QLSP
+                viewPager.setVisibility(View.GONE);
+                contentFrame.setVisibility(View.VISIBLE);
+                getSupportActionBar().setTitle("Quản lý sản phẩm");
+
+                // Nạp QLSanPhamFragment vào FrameLayout
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, new QLSanPhamFragment())
+                        .commit();
             } else if (id == R.id.nav_dang_xuat) {
                 finish();
             }
+            
             drawerLayout.closeDrawers();
             return true;
         });
+
+
     }
 }

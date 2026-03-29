@@ -20,16 +20,28 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#F7691E"
             app:title="Trang chủ"
-            app:titleTextColor="#FFFFFF" />
+            app:titleTextColor="#FFFFFF"
+            />
 
         <FrameLayout
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            >
+            android:visibility="gone" />
 
-        </FrameLayout>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            app:tabMode="fixed"
+            app:tabGravity="fill" />
 
     </LinearLayout>
 

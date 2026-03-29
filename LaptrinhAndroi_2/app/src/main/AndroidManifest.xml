@@ -25,6 +25,13 @@
         </activity>
         <activity
             android:name="Assignment.Activity.MainActivity_Assm"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name="Assignment.Activity.DangKy_assm"
+            android:exported="false" />
+        <activity
+            android:name="Assignment.Activity.LoginAssm"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,12 +39,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="Assignment.Activity.DangKy_assm"
-            android:exported="false" />
-        <activity
-            android:name="Assignment.Activity.LoginAssm"
-            android:exported="false" />
         <activity
             android:name="lap2.lap2ActivityMain"
             android:exported="false" />

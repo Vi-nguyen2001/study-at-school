@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="#FAF0E6"
     >
 
     <TextView
@@ -14,7 +14,6 @@
         android:textSize="35sp"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:background="#ffffff"
         android:textColor="#ff00"
         />
     <TextView
