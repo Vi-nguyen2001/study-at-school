@@ -1,92 +1,106 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="Assignment.FragmentScreen.GioiThieuFragment">
 
     <!-- TODO: Update blank fragment layout -->
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:orientation="vertical"
-       android:background="#FFDAB9"
-       >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFDAB9"
+        android:orientation="vertical">
 
-       <ImageView
-           android:layout_width="match_parent"
-           android:layout_height="180dp"
-           android:src="@drawable/logofpt"
-           android:background="@color/black"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/black"
+            android:src="@drawable/logofpt" />
 
-       <!-- Avatar -->
-       <ImageView
-           android:id="@+id/imgAvatar"
-           android:layout_width="150dp"
-           android:layout_height="150dp"
-           android:layout_gravity="center"
-           android:layout_marginTop="-50dp"
-           android:src="@drawable/img"
-           android:scaleType="centerCrop"
-           android:clipToOutline="true"
-           android:outlineProvider="background"
-           android:background="@drawable/bg_circle"
-           android:padding="8dp" />
+        <!-- Avatar -->
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-50dp"
+            android:background="@drawable/bg_circle"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img" />
 
-       <!-- Tên -->
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="Nguyễn Văn Vĩ"
-           android:textSize="22sp"
-           android:textStyle="bold"
-           android:textAlignment="center"
-           android:layout_marginTop="10dp"
-           android:textColor="#000"/>
+        <!-- Tên -->
+        <TextView
+            android:id="@+id/tvTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Nguyễn Văn Vĩ"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-       <!-- Card thông tin -->
-       <androidx.cardview.widget.CardView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_margin="16dp"
-           app:cardCornerRadius="16dp"
-           app:cardElevation="6dp">
+        <!-- Card thông tin -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical"
-               android:padding="26dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="26dp">
 
-               <!-- MSSV -->
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:text="🆔 MSSV: PH63869"
-                   android:textSize="26sp"
-                   android:padding="8dp"/>
+                <!-- MSSV -->
+                <TextView
+                    android:id="@+id/maSv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="🆔 MSSV: PH63869"
+                    android:textSize="26sp" />
 
-               <!-- Lớp -->
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:text="🎓 Lớp: MD21201"
-                   android:textSize="26sp"
-                   android:padding="8dp"/>
+                <!-- Lớp -->
+                <TextView
+                    android:id="@+id/lop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="🎓 Lớp: MD21201"
+                    android:textSize="26sp" />
 
-               <!-- Môn -->
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:text="📚 Môn: Lập trình Android 2"
-                   android:textSize="25dp"
-                   android:padding="8dp"/>
+                <!-- Môn -->
+                <TextView
+                    android:id="@+id/monHoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="📚 Môn: Lập trình Android 2"
+                    android:textSize="25dp" />
 
-           </LinearLayout>
+            </LinearLayout>
 
-       </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-
-
-   </LinearLayout>
+        <Button
+            android:id="@+id/btnSuaThongTin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:text="Sửa thông tin"
+            android:textStyle="bold"
+            app:backgroundTint="#FF3313"
+            app:cornerRadius="18dp"
+            app:strokeColor="#FF3313"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
 </FrameLayout>

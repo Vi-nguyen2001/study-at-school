@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="Assignment.FragmentScreen.CaiDatFragment">
+    tools:context="Assignment.FragmentScreen.CaiDatFragment"
+    android:background="#FAF0E6"
+    >
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -11,6 +13,7 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical"
+       android:gravity="center"
        >
        <TextView
            android:layout_width="match_parent"
@@ -74,6 +77,7 @@
            />
 
        <Button
+           android:id="@+id/btnDoi"
            android:layout_width="match_parent"
            android:layout_height="60dp"
            android:background="@drawable/bg_button"

@@ -71,4 +71,30 @@ public class NguoiDungDAO {
         return hoTen;
     }
 
+    public int updateMatKhau(String tenDangNhap, String matKhauMoi){
+        db = helper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("matKhau", matKhauMoi);
+        int kq = db.update("NguoiDung", values, "tenDangNhap = ?", new String[]{tenDangNhap});
+        return kq;
+    };
+
+    public boolean checkOldPassword(String tenDangNhap, String matKhauHienTai) {
+        db = helper.getReadableDatabase();
+        Cursor cursor = null;
+        try {
+            String sql = "SELECT * FROM NguoiDung WHERE tenDangNhap = ? AND matKhau = ?";
+            cursor = db.rawQuery(sql, new String[]{tenDangNhap, matKhauHienTai});
+            if (cursor.getCount() > 0) {
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return false;
+    }
 }

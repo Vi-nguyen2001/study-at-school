@@ -58,6 +58,7 @@ public class LoginAssm extends AppCompatActivity {
                 SharedPreferences pref = getSharedPreferences("USER_INFO", MODE_PRIVATE);
                 SharedPreferences.Editor editor = pref.edit();
                 editor.putString("hoTen", hoTen);
+                editor.putString("tenDangNhap", username);
                 editor.apply();
 
                 Toast.makeText(LoginAssm.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
