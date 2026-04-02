@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/lap5Trangchu"
+        android:title="Trang Chủ"
+        android:icon="@drawable/outline_add_home_24"
+        />
+
+    <item
+        android:id="@+id/lap5Dautrang"
+        android:title="Dấu Trang"
+        android:icon="@drawable/round_bookmark_24"
+        />
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Khác">
+            <menu>
+                <item
+                    android:id="@+id/lap5Setting"
+                    android:title="Cài Đặt"
+                    android:icon="@drawable/outline_build_24"
+                    />
+                <item
+                    android:id="@+id/lap5Logout"
+                    android:title="Đăng Xuất"
+                    android:icon="@drawable/img"
+                    />
+
+            </menu>
+        </item>
+    </group>
+</menu>
