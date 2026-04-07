@@ -3,11 +3,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_trang_chu"
-            android:icon="@android:drawable/ic_menu_view"
+            android:icon="@drawable/img_4"
             android:title="Trang chủ" />
         <item
             android:id="@+id/nav_san_pham"
-            android:icon="@android:drawable/ic_menu_myplaces"
+            android:icon="@drawable/img_7"
             android:title="Quản lý sản phẩm" />
         <item
             android:id="@+id/nav_gioi_thieu"

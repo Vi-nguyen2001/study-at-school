@@ -3,8 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
+        android:name="Lap6.bai2.ConfigNotificationLap6"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,24 +19,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLiteDemo">
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
-        <activity
-            android:name="Assignment.Activity.QLSanPhamActivity_Assm"
+            android:name="Lap6.bai4.bai4_lap6"
             android:exported="false" >
 
         </activity>
         <activity
-            android:name="Assignment.Activity.MainActivity_Assm"
+            android:name="Lap6.bai3.bai3_lap6"
             android:exported="false">
+
         </activity>
         <activity
-            android:name="Assignment.Activity.DangKy_assm"
-            android:exported="false" />
-        <activity
-            android:name="Assignment.Activity.LoginAssm"
+            android:name="Lap6.bai2.bai2_lap6"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,6 +38,24 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="Lap6.bai1.MainLap6"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="Assignment.Activity.QLSanPhamActivity_Assm"
+            android:exported="false" />
+        <activity
+            android:name="Assignment.Activity.MainActivity_Assm"
+            android:exported="false" />
+        <activity
+            android:name="Assignment.Activity.DangKy_assm"
+            android:exported="false" />
+        <activity
+            android:name="Assignment.Activity.LoginAssm"
+            android:exported="false" />
+        <activity
             android:name="lap2.lap2ActivityMain"
             android:exported="false" />
         <activity
@@ -47,6 +63,16 @@
             android:exported="false" />
         <activity
             android:name=".ListStudentScreen"
+            android:exported="false" />
+
+        <service
+            android:name="Lap6.bai2.ForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+        <service
+            android:name="Lap6.bai3.BackGroundServices"
+            android:enabled="true"
             android:exported="false" />
     </application>
 

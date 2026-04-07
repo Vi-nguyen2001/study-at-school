@@ -56,9 +56,9 @@ public class MainActivity_Assm extends AppCompatActivity {
 
         new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
             switch (position) {
-                case 0: tab.setText("Cài đặt"); break;
-                case 1: tab.setText("Trang Chủ"); break;
-                case 2: tab.setText("Giới thiệu"); break;
+                case 0: tab.setIcon(R.drawable.img_5); tab.setText("Cài đặt"); break;
+                case 1: tab.setIcon(R.drawable.img_4); tab.setText("Trang chủ"); break;
+                case 2: tab.setIcon(R.drawable.img_6); tab.setText("Giới thiệu"); break;
             }
         }).attach();
 
@@ -125,6 +125,8 @@ public class MainActivity_Assm extends AppCompatActivity {
                         .replace(R.id.content_frame, new QLSanPhamFragment())
                         .commit();
             } else if (id == R.id.nav_dang_xuat) {
+                Intent intent = new Intent(MainActivity_Assm.this, LoginAssm.class);
+                startActivity(intent);
                 finish();
             }
             

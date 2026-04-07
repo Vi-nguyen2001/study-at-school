@@ -29,9 +29,6 @@ public class CaiDatFragment extends Fragment {
     private Button btnDoiMk;
     private NguoiDungDAO dao;
 
-
-
-
     public CaiDatFragment() {
         // Required empty public constructor
     }

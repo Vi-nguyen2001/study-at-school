@@ -23,7 +23,6 @@ public class TrangChuFragment extends Fragment {
                             @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_trang_chu, container, false);
         tvUser = view.findViewById(R.id.tvUser);
-        
         // Đọc tên người dùng từ bộ nhớ đệm
         SharedPreferences pref = requireActivity().getSharedPreferences("USER_INFO", android.content.Context.MODE_PRIVATE);
         String hoTen = pref.getString("hoTen", "Khách");
