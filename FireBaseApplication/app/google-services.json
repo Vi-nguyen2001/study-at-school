@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "524817284134",
+    "project_id": "lap7-androi2",
+    "storage_bucket": "lap7-androi2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524817284134:android:5cdf64042a802b8cd27ae7",
+        "android_client_info": {
+          "package_name": "fpoly.vinv01.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4DkFQG35k_5fRVJE8iFnbJp09WwbWI6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
