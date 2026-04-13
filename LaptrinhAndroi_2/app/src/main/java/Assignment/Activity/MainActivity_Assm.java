@@ -1,5 +1,6 @@
 package Assignment.Activity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -128,8 +129,17 @@ public class MainActivity_Assm extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity_Assm.this, LoginAssm.class);
                 startActivity(intent);
                 finish();
+            }else if (id == R.id.nav_thoat) {
+                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity_Assm.this)
+                        .setTitle("Xác nhận thoát ứng dụng")
+                        .setMessage("Bạn có muốn thoát ứng dụng không?")
+                        .setPositiveButton("Có", (dialog, which) -> {
+                           finishAffinity();
+                           System.exit(0);
+                        })
+                        .setNegativeButton("Không", null)
+                        .show();
             }
-            
             drawerLayout.closeDrawers();
             return true;
         });

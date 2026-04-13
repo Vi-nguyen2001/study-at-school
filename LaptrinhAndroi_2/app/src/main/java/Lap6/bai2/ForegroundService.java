@@ -1,5 +1,6 @@
 package Lap6.bai2;
 
+import android.app.Notification;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -7,6 +8,7 @@ import android.os.IBinder;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
 
 import fpoly.vinv01.sqlitedemo.R;
 
@@ -28,6 +30,12 @@ public class ForegroundService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Toast.makeText(this, "Service đang chạy", Toast.LENGTH_SHORT).show();
+        Notification notification = new NotificationCompat.Builder(this, ConfigNotificationLap6.CHANNEL)
+                .setContentTitle("Foreground Service")
+                .setContentText("Đang chạy nền")
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .build();
+        startForeground(1, notification);
         if (mediaPlayer != null) {
             mediaPlayer.start();
         } else {

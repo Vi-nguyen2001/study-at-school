@@ -25,6 +25,10 @@
                 android:id="@+id/nav_dang_xuat"
                 android:icon="@android:drawable/ic_lock_power_off"
                 android:title="Đăng xuất" />
+            <item
+                android:id="@+id/nav_thoat"
+                android:icon="@android:drawable/ic_menu_close_clear_cancel"
+                android:title="Thoát ứng dụng" />
         </menu>
     </item>
 </menu>
